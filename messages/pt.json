@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "events": "Eventos",
+    "news": "Notícias",
+    "gallery": "Galeria",
+    "livestream": "Transmissão ao Vivo",
+    "donate": "Doar",
+    "contact": "Contato",
+    "history": "História"
+  },
+  "home": {
+    "title": "Bem-vindos à Paróquia Santo Inácio de Loyola",
+    "subtitle": "Uma comunidade de fé, esperança e amor",
+    "massSchedule": "Horário das Missas",
+    "upcomingEvents": "Próximos Eventos",
+    "watchLive": "Assistir ao Vivo",
+    "donateNow": "Doar Agora"
+  },
+  "events": {
+    "title": "Eventos Paroquiais",
+    "noEvents": "Não há eventos próximos neste momento.",
+    "date": "Data",
+    "time": "Hora",
+    "location": "Local",
+    "description": "Descrição"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "name": "Nome",
+    "email": "E-mail",
+    "message": "Mensagem",
+    "send": "Enviar Mensagem",
+    "success": "Obrigado pela sua mensagem. Entraremos em contato em breve.",
+    "error": "Houve um erro ao enviar sua mensagem. Tente novamente."
+  },
+  "donate": {
+    "title": "Apoie Nossa Paróquia",
+    "description": "Suas generosas doações nos ajudam a manter nossa igreja e apoiar nossos programas comunitários.",
+    "amount": "Valor",
+    "monthly": "Mensal",
+    "oneTime": "Uma Vez",
+    "donateButton": "Doar"
+  },
+  "news": {
+    "title": "Notícias Paroquiais",
+    "readMore": "Leia Mais",
+    "publishedOn": "Publicado em"
+  },
+  "gallery": {
+    "title": "Galeria de Fotos",
+    "viewAll": "Ver Todas as Fotos"
+  },
+  "history": {
+    "title": "Nossa História",
+    "subtitle": "A história da Paróquia Santo Inácio de Loyola"
+  },
+  "footer": {
+    "address": "123 Rua da Fé, Cidade Comunidade, CC 12345",
+    "phone": "(555) 123-4567",
+    "email": "info@saintignatiusloyola.org",
+    "followUs": "Siga-nos"
+  }
+}

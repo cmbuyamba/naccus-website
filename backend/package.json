@@ -1,0 +1,32 @@
+{
+  "name": "saint-ignatius-backend",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application for Saint Ignatius of Loyola Parish",
+  "scripts": {
+    "build": "strapi build",
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/strapi": "4.15.5",
+    "@strapi/plugin-users-permissions": "4.15.5",
+    "@strapi/plugin-i18n": "4.15.5",
+    "@strapi/plugin-email": "4.15.5",
+    "@strapi/plugin-upload": "4.15.5",
+    "sqlite3": "5.1.6"
+  },
+  "author": {
+    "name": "Saint Ignatius of Loyola Parish"
+  },
+  "strapi": {
+    "uuid": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+  },
+  "engines": {
+    "node": ">=16.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

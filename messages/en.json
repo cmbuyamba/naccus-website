@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "events": "Events",
+    "news": "News",
+    "gallery": "Gallery",
+    "livestream": "Livestream",
+    "donate": "Donate",
+    "contact": "Contact",
+    "history": "History"
+  },
+  "home": {
+    "title": "Welcome to Saint Ignatius of Loyola Parish",
+    "subtitle": "A community of faith, hope, and love",
+    "massSchedule": "Mass Schedule",
+    "upcomingEvents": "Upcoming Events",
+    "watchLive": "Watch Live",
+    "donateNow": "Donate Now"
+  },
+  "events": {
+    "title": "Parish Events",
+    "noEvents": "No upcoming events at this time.",
+    "date": "Date",
+    "time": "Time",
+    "location": "Location",
+    "description": "Description"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "success": "Thank you for your message. We will get back to you soon.",
+    "error": "There was an error sending your message. Please try again."
+  },
+  "donate": {
+    "title": "Support Our Parish",
+    "description": "Your generous donations help us maintain our church and support our community programs.",
+    "amount": "Amount",
+    "monthly": "Monthly",
+    "oneTime": "One Time",
+    "donateButton": "Donate"
+  },
+  "news": {
+    "title": "Parish News",
+    "readMore": "Read More",
+    "publishedOn": "Published on"
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "viewAll": "View All Photos"
+  },
+  "history": {
+    "title": "Our History",
+    "subtitle": "The story of Saint Ignatius of Loyola Parish"
+  },
+  "footer": {
+    "address": "123 Faith Street, Community City, CC 12345",
+    "phone": "(555) 123-4567",
+    "email": "info@saintignatiusloyola.org",
+    "followUs": "Follow Us"
+  }
+}
