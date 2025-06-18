@@ -1,0 +1,10 @@
+<!-- This file contains placeholder SVG images for mock data -->
+<!-- You can replace these with actual images later -->
+
+<!-- Mock Mass Image -->
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#7c3aed"/>
+  <text x="200" y="150" text-anchor="middle" fill="white" font-size="20" font-family="Arial">
+    Sunday Mass
+  </text>
+</svg>

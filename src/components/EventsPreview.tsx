@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { mockApiService } from '../lib/mockData';
 
 interface Event {
   id: number;
@@ -32,8 +33,8 @@ export default function EventsPreview() {
 
   const fetchEvents = async () => {
     try {
-      const response = await fetch(`${process.env.STRAPI_API_URL}/api/events?populate=*&sort=date:asc&pagination[limit]=3`);
-      const data = await response.json();
+      // Use mock data instead of API call
+      const data = await mockApiService.getEvents();
       setEvents(data.data || []);
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -71,11 +72,9 @@ export default function EventsPreview() {
         <div key={event.id} className="card hover:shadow-xl transition-shadow duration-200">
           <div className="flex items-start space-x-4">
             {event.attributes.image?.data && (
-              <img
-                src={`${process.env.STRAPI_API_URL}${event.attributes.image.data.attributes.url}`}
-                alt={event.attributes.title}
-                className="w-16 h-16 rounded-lg object-cover flex-shrink-0"
-              />
+              <div className="w-16 h-16 rounded-lg bg-primary-100 flex items-center justify-center flex-shrink-0">
+                <span className="text-primary-600 text-2xl">📅</span>
+              </div>
             )}
             <div className="flex-1">
               <h3 className="font-semibold text-lg mb-2">{event.attributes.title}</h3>

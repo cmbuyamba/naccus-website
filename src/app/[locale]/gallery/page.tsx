@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import ImageGallery from 'react-image-gallery';
-import 'react-image-gallery/styles/css/image-gallery.css';
+import { mockApiService } from '../../../lib/mockData';
 
 interface GalleryImage {
   id: number;
@@ -32,8 +31,8 @@ export default function GalleryPage() {
 
   const fetchGalleryImages = async () => {
     try {
-      const response = await fetch(`${process.env.STRAPI_API_URL}/api/gallery-images?populate=*`);
-      const data = await response.json();
+      // Use mock data instead of API call
+      const data = await mockApiService.getGalleryImages();
       setImages(data.data || []);
     } catch (error) {
       console.error('Error fetching gallery images:', error);
@@ -44,8 +43,8 @@ export default function GalleryPage() {
   };
 
   const galleryItems = images.map((image) => ({
-    original: `${process.env.STRAPI_API_URL}${image.attributes.image.data.attributes.url}`,
-    thumbnail: `${process.env.STRAPI_API_URL}${image.attributes.image.data.attributes.url}`,
+    original: `/images/placeholder-${image.id}.jpg`,
+    thumbnail: `/images/placeholder-${image.id}.jpg`,
     description: image.attributes.title,
   }));
 
@@ -70,13 +69,20 @@ export default function GalleryPage() {
         <h1 className="text-4xl font-bold mb-8 text-center">{t('title')}</h1>
         
         {images.length > 0 ? (
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <ImageGallery 
-              items={galleryItems}
-              showThumbnails={true}
-              showPlayButton={false}
-              autoPlay={false}
-            />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {images.map((image) => (
+              <div key={image.id} className="card group cursor-pointer hover:shadow-xl transition-all duration-300">
+                <div className="aspect-square bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                  <span className="text-primary-600 text-6xl group-hover:scale-110 transition-transform duration-300">
+                    🖼️
+                  </span>
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{image.attributes.title}</h3>
+                {image.attributes.description && (
+                  <p className="text-gray-600 text-sm">{image.attributes.description}</p>
+                )}
+              </div>
+            ))}
           </div>
         ) : (
           <div className="text-center py-12">

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import ReactPlayer from 'react-player';
+import { mockApiService } from '../lib/mockData';
 
 interface LivestreamData {
   id: number;
@@ -23,8 +23,8 @@ export default function LivestreamWidget() {
 
   const fetchLivestream = async () => {
     try {
-      const response = await fetch(`${process.env.STRAPI_API_URL}/api/livestream`);
-      const data = await response.json();
+      // Use mock data instead of API call
+      const data = await mockApiService.getLivestream();
       setLivestream(data.data || null);
     } catch (error) {
       console.error('Error fetching livestream:', error);
@@ -67,14 +67,14 @@ export default function LivestreamWidget() {
             🔴 LIVE
           </div>
         )}
-        <div className="aspect-video">
-          <ReactPlayer
-            url={livestream.attributes.url}
-            width="100%"
-            height="100%"
-            controls
-            playing={livestream.attributes.isLive}
-          />
+        <div className="aspect-video bg-black rounded-lg flex items-center justify-center">
+          <div className="text-center text-white">
+            <div className="text-6xl mb-4">📺</div>
+            <p className="text-lg">Live Stream Player</p>
+            <p className="text-sm text-gray-300">
+              {livestream.attributes.isLive ? '🔴 LIVE NOW' : 'Not currently live'}
+            </p>
+          </div>
         </div>
       </div>
       <div className="mt-4">

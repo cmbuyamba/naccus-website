@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
+import { mockApiService } from '../lib/mockData';
 
 interface NewsPost {
   id: number;
@@ -30,8 +31,8 @@ export default function NewsPreview() {
 
   const fetchNews = async () => {
     try {
-      const response = await fetch(`${process.env.STRAPI_API_URL}/api/news?populate=*&sort=publishedAt:desc&pagination[limit]=3`);
-      const data = await response.json();
+      // Use mock data instead of API call
+      const data = await mockApiService.getNews();
       setNews(data.data || []);
     } catch (error) {
       console.error('Error fetching news:', error);
@@ -60,12 +61,14 @@ export default function NewsPreview() {
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {news.map((post) => (
         <article key={post.id} className="card">
-          {post.attributes.featuredImage?.data && (
-            <img
-              src={`${process.env.STRAPI_API_URL}${post.attributes.featuredImage.data.attributes.url}`}
-              alt={post.attributes.title}
-              className="w-full h-48 object-cover rounded-lg mb-4"
-            />
+          {post.attributes.featuredImage?.data ? (
+            <div className="w-full h-48 bg-gradient-to-br from-primary-200 to-primary-300 rounded-lg mb-4 flex items-center justify-center">
+              <span className="text-primary-600 text-4xl">📰</span>
+            </div>
+          ) : (
+            <div className="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg mb-4 flex items-center justify-center">
+              <span className="text-gray-500 text-4xl">📰</span>
+            </div>
           )}
           <h3 className="font-semibold text-lg mb-2">{post.attributes.title}</h3>
           <p className="text-sm text-gray-600 mb-2">
