@@ -1,0 +1,34 @@
+{
+  "kind": "singleType",
+  "collectionName": "livestream",
+  "info": {
+    "singularName": "livestream",
+    "pluralName": "livestreams",
+    "displayName": "Livestream",
+    "description": "Livestream configuration"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "isLive": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "text"
+    },
+    "scheduleText": {
+      "type": "text"
+    }
+  }
+}

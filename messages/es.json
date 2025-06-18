@@ -1,0 +1,65 @@
+{
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "events": "Eventos",
+    "news": "Noticias",
+    "gallery": "Galería",
+    "livestream": "Transmisión en Vivo",
+    "donate": "Donar",
+    "contact": "Contacto",
+    "history": "Historia"
+  },
+  "home": {
+    "title": "Bienvenidos a la Parroquia San Ignacio de Loyola",
+    "subtitle": "Una comunidad de fe, esperanza y amor",
+    "massSchedule": "Horario de Misas",
+    "upcomingEvents": "Próximos Eventos",
+    "watchLive": "Ver en Vivo",
+    "donateNow": "Donar Ahora"
+  },
+  "events": {
+    "title": "Eventos Parroquiales",
+    "noEvents": "No hay eventos próximos en este momento.",
+    "date": "Fecha",
+    "time": "Hora",
+    "location": "Lugar",
+    "description": "Descripción"
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "success": "Gracias por tu mensaje. Te responderemos pronto.",
+    "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
+  },
+  "donate": {
+    "title": "Apoya Nuestra Parroquia",
+    "description": "Tus generosas donaciones nos ayudan a mantener nuestra iglesia y apoyar nuestros programas comunitarios.",
+    "amount": "Cantidad",
+    "monthly": "Mensual",
+    "oneTime": "Una Vez",
+    "donateButton": "Donar"
+  },
+  "news": {
+    "title": "Noticias Parroquiales",
+    "readMore": "Leer Más",
+    "publishedOn": "Publicado el"
+  },
+  "gallery": {
+    "title": "Galería de Fotos",
+    "viewAll": "Ver Todas las Fotos"
+  },
+  "history": {
+    "title": "Nuestra Historia",
+    "subtitle": "La historia de la Parroquia San Ignacio de Loyola"
+  },
+  "footer": {
+    "address": "123 Calle Fe, Ciudad Comunidad, CC 12345",
+    "phone": "(555) 123-4567",
+    "email": "info@saintignatiusloyola.org",
+    "followUs": "Síguenos"
+  }
+}
